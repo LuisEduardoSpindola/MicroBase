@@ -1,0 +1,67 @@
+﻿@model Domain.Models.Produto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 style="text-align:center">Criar Produto</h3>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6" style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+        <br />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label">Nome:</label>
+                <input asp-for="Nome" class="form-control" placeholder="Digite o nome do produto" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label">Descrição:</label>
+                <input asp-for="Descricao" class="form-control" placeholder="Digite a descrição do produto" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorCompra" class="control-label">Valor de Compra:</label>
+                <input asp-for="ValorCompra" class="form-control" placeholder="Digite o valor de compra" />
+                <span asp-validation-for="ValorCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorVenda" class="control-label">Valor de Venda:</label>
+                <input asp-for="ValorVenda" class="form-control" placeholder="Digite o valor de venda" />
+                <span asp-validation-for="ValorVenda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ean" class="control-label">EAN:</label>
+                <input asp-for="Ean" class="form-control" placeholder="Digite o código EAN" />
+                <span asp-validation-for="Ean" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdAtual" class="control-label">Quantidade Atual:</label>
+                <input asp-for="QtdAtual" class="form-control" placeholder="Digite a quantidade atual" />
+                <span asp-validation-for="QtdAtual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QtdMinima" class="control-label">Quantidade Mínima:</label>
+                <input asp-for="QtdMinima" class="form-control" placeholder="Digite a quantidade mínima" />
+                <span asp-validation-for="QtdMinima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Imagem" class="control-label">Imagem:</label>
+                <input asp-for="Imagem" class="form-control" placeholder="Insira o URL da imagem" />
+                <span asp-validation-for="Imagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeDeMedida" class="control-label">Unidade de Medida:</label>
+                <input asp-for="UnidadeDeMedida" class="form-control" placeholder="Digite a unidade de medida" />
+                <span asp-validation-for="UnidadeDeMedida" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group text-center">
+                <input type="submit" value="Salvar" class="btn btn-outline-primary" />
+            </div>
+            <br />
+        </form>
+    </div>
+</div>

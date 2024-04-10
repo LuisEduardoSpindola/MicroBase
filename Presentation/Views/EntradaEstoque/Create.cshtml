@@ -1,0 +1,45 @@
+﻿@model Domain.Models.EntradaEstoque
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>EntradaEstoque</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NumeroNotaFiscal" class="control-label"></label>
+                <input asp-for="NumeroNotaFiscal" class="form-control" />
+                <span asp-validation-for="NumeroNotaFiscal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadeEntrada" class="control-label"></label>
+                <input asp-for="QuantidadeEntrada" class="form-control" />
+                <span asp-validation-for="QuantidadeEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepositoArmazenamento" class="control-label"></label>
+                <input asp-for="DepositoArmazenamento" class="form-control" />
+                <span asp-validation-for="DepositoArmazenamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataCadastro" class="control-label"></label>
+                <input asp-for="DataCadastro" class="form-control" />
+                <span asp-validation-for="DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Domain.Models.PedidoInterno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoSolicitacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoEan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fabricante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartamentoSolicitante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioSolicitante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCadastro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ServicoSolicitado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fornecedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoSolicitacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoEan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fabricante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartamentoSolicitante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioSolicitante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicoSolicitado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fornecedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observacao)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

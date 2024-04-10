@@ -1,0 +1,50 @@
+﻿@model Domain.Models.SaidaEstoque
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SaidaEstoque</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Usuario" class="control-label"></label>
+                <input asp-for="Usuario" class="form-control" />
+                <span asp-validation-for="Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartamentoSolicitante" class="control-label"></label>
+                <input asp-for="DepartamentoSolicitante" class="form-control" />
+                <span asp-validation-for="DepartamentoSolicitante" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProdutoId" class="control-label"></label>
+                <input asp-for="ProdutoId" class="form-control" />
+                <span asp-validation-for="ProdutoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadeRetirada" class="control-label"></label>
+                <input asp-for="QuantidadeRetirada" class="form-control" />
+                <span asp-validation-for="QuantidadeRetirada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataCadastro" class="control-label"></label>
+                <input asp-for="DataCadastro" class="form-control" />
+                <span asp-validation-for="DataCadastro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
